@@ -1,0 +1,28 @@
+{
+  "name": "inventory",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.1.1",
+    "react-scripts": "0.8.4",
+    "sass-loader": "^4.1.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
+    "style-loader": "^0.13.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
