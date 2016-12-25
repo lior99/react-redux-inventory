@@ -17,5 +17,5 @@ made of react, redux, react-router
 <h4>Development</h4>
 1. before running start - you need to add SAAS module loader to webpack.config.dev.js
 You can do this by simply replacing the file in 
-	<strong>node_modules/react-scripts/config/</strong>
+	<i>>node_modules/react-scripts/config/</i>
 
