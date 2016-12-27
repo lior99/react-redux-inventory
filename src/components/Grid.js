@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import getGuid from '../Utils/Utils';
 import Row from './Row';
 import AddItemToInventory from './AddItemToInventory';
+import { saveItemOnEdit, deleteItem } from '../actions/actions';
 
 import { connect } from 'react-redux';
 
@@ -98,18 +99,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onSaveItem : (item) => {
-			dispatch({
-				type : 'SAVE_ITEM_ON_EDIT',
-				item
-			})			
+			dispatch(saveItemOnEdit(item));
 		},
 
 		onDeleteItem : (id) => {
-			dispatch({
-				type: 'DELETE_ITEM',
-				id
-			})
-		}	
+			dispatch(deleteItem(id));
+		}
 	}
 }
 

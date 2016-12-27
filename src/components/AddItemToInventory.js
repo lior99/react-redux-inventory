@@ -1,6 +1,7 @@
 import React from 'react';
 import getGuid from '../Utils/Utils';
 import { connect } from 'react-redux';
+import { addItemToInventory }  from '../actions/actions';
 
 class AddItemToInventory extends React.Component {
 	constructor(){
@@ -59,12 +60,9 @@ class AddItemToInventory extends React.Component {
 const mapDispatchToState = (dispatch) => {
 	return {
 		onAdddItemToInventory : (newItem) => {
-			dispatch({
-				type : 'ADD_ITEM_TO_INVENTORY',
-				item : newItem
-		});
+			dispatch(addItemToInventory(newItem));
+		}
 	  }
-	}
 }
 
 export default connect(null, mapDispatchToState)(AddItemToInventory);

@@ -3,10 +3,6 @@ const inventory = (state = [], action) => {
 
 	switch (action.type) {
 		case 'ADD_ITEM_TO_INVENTORY':
-			// let newState = state.slice(0);
-			// newState.push(action.item);
-			// return newState;
-
 				return [
 					...state,
 					action.item
