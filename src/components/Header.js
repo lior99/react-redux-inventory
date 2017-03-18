@@ -6,12 +6,15 @@ const Header = () => {
 			{
 				id : 1,
 				text : 'Home',
-				path : '/'
+				path : '/',
+				name : 'home'
 			},
 			{
 				id : 2,
 				text : 'Grid',
-				path : '/grid'
+				path : '/grid',
+				name : 'grid'
+
 			},
 			/*{
 				id : 3,
@@ -20,10 +23,11 @@ const Header = () => {
 			}*/
 		]
 
-		const links = items.map(menuItem => {
+		const links = items.map((menuItem, index) => {
+			const key = `id_${index}`
 			return (
-					<li key={menuItem.id}>
-						<Link to={menuItem.path}>{menuItem.text}</Link>
+					<li key={ key }>
+						<Link to={ menuItem.path }>{ menuItem.text }</Link>
 					</li>
 			)
 		});

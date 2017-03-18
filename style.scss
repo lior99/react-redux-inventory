@@ -1,0 +1,193 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-color : #2196f3;
+}
+
+/******************* NAvigation Bar **************************/
+.navigation-bar {
+	list-style-type:none;
+	display:flex;
+	height: 70px;
+
+	li {
+		flex:1;
+		color:#fff;
+		align-items: center;
+		justify-content: space-around;
+		display: flex;
+
+		a {
+			text-decoration: none;
+			padding: 14px;
+			text-align: center;
+			color:#fff;
+			font-size:1.7rem;
+		}
+
+		a:hover {
+			background-color : #ffe800;
+			border-radius: 10px;
+			color:#000;
+		}
+	}
+}
+
+/******************* End Navigation Bar **************************/
+
+
+/********** Items Grid **********************************************/
+
+.grid-container-for-items {
+	display : flex;
+	justify-content : flex-start;
+	align-items : center;
+	flex-wrap : wrap;
+
+
+	.grid-box-item {
+		height: 250px;
+		width: 200px;
+		border: solid 1px silver;
+		display: flex;
+		justify-content: center;
+		flex-direction : column;
+		align-items : center;
+		margin:50px;
+		flex: 1 1 25%;
+
+		.item-description {
+			font-weight: bold;
+		}
+
+		div {
+			margin-top:5px;
+		}
+
+		img {
+			height: 150px;
+			width:150px;
+			border: none;
+		}
+	}
+}
+
+/********** End Items Grid **********************************************/
+
+
+/************* Main Grid ******************/
+.grid-container {
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.add-new-item {
+	margin:10px auto;
+	border: solid 1px silver;			
+	width:300px;
+}
+
+.add-new-item-form {
+	margin:10px;
+
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+	}
+}
+
+.table {
+	.table-head {
+		display: flex;
+	}
+	.table-head-cell {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		background-color:lightslategrey;
+		color:#fff;
+		height: 50px;
+
+	}
+
+	.table-body {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+
+
+		.row {
+			display: flex;
+			flex:1;
+			justify-content: space-around;
+
+			.item {
+				display: flex;
+				border-left:solid 1px silver;
+				border-bottom:solid 1px silver;
+				flex-wrap: wrap;
+				flex:1;
+				align-items: center;
+				justify-content: center;
+
+				.short-image {
+					overflow:hidden;
+					text-overflow:ellipsis;
+					max-width: 100px;
+				}
+
+				.small-input {
+					width: 50px;
+				}
+
+			}
+		}
+	}
+
+}
+/************* End Main Grid ******************/
+
+
+.out-of-stock {
+	font-style:italic;
+	background-color:moccasin;
+}
+
+.hide { 
+	display:none
+}
+
+.show {
+	display : block;
+}
+
+.btn {
+	background-color:royalblue;
+	color: #FFF;
+	margin-left: 20px;
+	padding: 10px;	
+	border:none;
+	border-radius: 5px;
+	min-width: 50px;
+	min-height: 30px;
+	cursor:pointer;	
+
+}
+
+
+.input-form {
+	border:solid 1px silver;
+	outline:none;
+
+	&:focus {
+		border:solid 2px cornflowerblue;
+		box-shadow:1px 4px 6px 1px #b5b5b5;
+	}
+}

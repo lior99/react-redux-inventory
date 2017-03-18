@@ -5,12 +5,12 @@ const inventory = (state = [], action) => {
 		case 'ADD_ITEM_TO_INVENTORY':
 				return [
 					...state,
-					action.item
+					action.payload.item
 				]
 
 		case 'SAVE_ITEM_ON_EDIT':
 			const copiedState = [ ...state ];
-			index = copiedState.findIndex((item) => item.id === action.item.id);
+			index = copiedState.findIndex((item) => item.id === action.payload.item.id);
 
 			if (index === -1){
 				return state;
@@ -18,12 +18,12 @@ const inventory = (state = [], action) => {
 
 			return [
 				...state.slice(0, index),
-				action.item,
+				action.payload.item,
 				...state.slice(index + 1)
 			]
 
 		case 'DELETE_ITEM' :
-		   index = state.findIndex( item => item.id === action.id);
+		   index = state.findIndex( item => item.id === action.payload.id);
 		   if (index === -1) return state;
 
 		   return [

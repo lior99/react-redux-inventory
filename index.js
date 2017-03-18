@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import { Provider }  from 'react-redux';
 
-import App from './App';
-import Grid from './components/Grid';
-import ItemsGrid from './components/ItemsGrid';
-import AddItemToInventory from './components/AddItemToInventory';
-import store, { history } from './store';
+import App from './src/App';
+import Grid from './src/components/Grid';
+import ItemsGrid from './src/components/ItemsGrid';
+import AddItemToInventory from './src/components/AddItemToInventory';
+import store, { history } from './src/store';
 
-import style from './style/style.scss';
+import style from './style.scss';
+
 
 const router = (
 		<Provider store={ store }>
 			<Router history={ history }>
 	      		<Route path="/" component={ App }>
 	      			<IndexRoute component={ ItemsGrid }></IndexRoute>
-					<Route path="grid" component={ Grid }></Route>
+					    <Route path="grid" component={ Grid }></Route>
 		      	</Route>
 			</Router>
 		</Provider>
